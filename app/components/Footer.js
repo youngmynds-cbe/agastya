@@ -126,7 +126,13 @@
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram, MapPin, Mail, Phone } from 'lucide-react';
 
-export default function Footer() {
+export default function Footer({
+   onHomeClick,
+  onAboutClick,
+  onServicesClick,
+  onPortfolioClick,
+  onContactClick,
+}) {
   return (
    <footer className="w-full bg-white border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
