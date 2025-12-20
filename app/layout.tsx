@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Montserrat,Poppins  } from "next/font/google";
+import { Montserrat,Poppins,Inter,Noto_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400"],
+
   variable: "--font-montserrat",
 });
 
@@ -23,6 +23,17 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["600"],
   variable: "--font-poppins",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["600"], // SemiBold
+  variable: "--font-inter",
+});
+const notoSans = Noto_Sans({
+  subsets: ["latin"],
+  weight: ["600"], // SemiBold
+  variable: "--font-noto-sans",
 });
 
 
@@ -50,6 +61,8 @@ export default function RootLayout({
     ${geistMono.variable}
     ${montserrat.variable}
     ${poppins.variable}
+    ${inter.variable}
+    ${notoSans.variable}
     antialiased
   `}
 >

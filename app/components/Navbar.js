@@ -233,6 +233,14 @@ const Navbar = ({
   const [activeLink, setActiveLink] = useState("home");
   const [open, setOpen] = useState(false);
 
+
+  const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
   /* Navbar shrink on scroll */
   useEffect(() => {
     const handleScroll = () => {
